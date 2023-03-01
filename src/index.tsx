@@ -8,11 +8,14 @@ import Success from "./pages/Success";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "",
     element: <App />,
     children: [
       {
-        path: "success",
+        path: "/login",
+      },
+      {
+        path: "/",
         element: <Success />,
       },
     ],
