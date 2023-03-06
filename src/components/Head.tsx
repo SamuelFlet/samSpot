@@ -1,8 +1,17 @@
 import "../styles/App.css";
+import { supabase } from "../supabaseClient";
+import github from "../assets/github.svg"
+import linkedin from "../assets/linkedin.svg"
+import contact from "../assets/contact.svg"
 import { NavLink } from "react-router-dom";
 
 
 function Head(props:any) {
+  async function signOut(){
+    const {error} = await supabase.auth.signOut();
+    window.location.reload();
+  }
+
   const nav = (
     <nav className="flex justify-center border-t border-b border-black">
       <ul className="flex flex-row items-center">
@@ -13,14 +22,23 @@ function Head(props:any) {
           <NavLink to="/about">About</NavLink>
         </li>
         <li className="p-4 new border-r border-black">
-          <NavLink to="/login">Login</NavLink>
+          <NavLink to="/login">Profile</NavLink>
         </li>
         <li className="p-4 new border-r border-black">
-          <NavLink to="/signup">Sign Up</NavLink>
+        <p onClick={signOut}>Sign Out</p>
         </li>
         <li className="flex justify-evenly p-4 new border-r border-black">
+          <a href="https://github.com/SamuelFlet" className="">
+            <img alt="Github" className="photo" src={github} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/samuelrhfletcher/"
+            className=""
+          >
+            <img alt="LinkedIn" className="photo" src={linkedin} />
+          </a>
           <a href="https://www.samfletch.sbs/" className="">
-              {props.user.id}
+            <img alt="Personal Website" className="photo" src={contact} />
           </a>
         </li>
       </ul>
@@ -33,7 +51,7 @@ function Head(props:any) {
         <div className="text-center">
           <p className="headers tracking-wide">
           </p>
-          <p className="title text-black">Lorem Ipsum</p>
+          <p className="title text-black">Sam Spot</p>
           {nav}
         </div>
       </nav>

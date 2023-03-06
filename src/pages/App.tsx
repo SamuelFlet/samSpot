@@ -21,8 +21,8 @@ function App() {
 
   return (
     <div className="App">
-      {session ? <Head {...session}/> : <div></div>}
-      {!session ? <Login /> : <Outlet />}
+      {session ? <Head {...session} /> : <div></div>}
+      <div id="feat">{!session ? <Login /> : <Outlet />}</div>
     </div>
   );
 }

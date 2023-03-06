@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./styles/index.css";
 
 import App from "./pages/App";
-import Success from "./pages/Success";
+import Featured from "./pages/Featured";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/",
-        element: <Success />,
+        element: <Featured />,
       },
     ],
   },

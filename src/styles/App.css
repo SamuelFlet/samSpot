@@ -36,3 +36,95 @@
     transform: rotate(360deg);
   }
 }
+
+.break {
+  flex-basis: 70%;
+  height: 0;
+}
+
+.center {
+  text-align: center;
+}
+
+/* If the text has multiple lines, add the following: */
+.center p {
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.head {
+  background-color: #eee;
+  padding-left: 1%;
+}
+
+.headers {
+  letter-spacing: 0.4em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding-top: 1%;
+  padding-bottom: 0.5%;
+}
+
+.title {
+  font-size: 5em;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  font-family: "Normal";
+}
+
+.abouttitle {
+  padding-top: 1em;
+  font-size: 3em;
+  font-family: "Normal";
+}
+
+.new {
+  width: 10rem;
+}
+
+.photo {
+  height: 20px;
+  width: 20px;
+}
+
+.active {
+  color: #6d28d9;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #fff;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: rgb(241, 241, 241);
+  color: black;
+}
+
+#feat {
+
+    margin: auto;
+    width: 75%;
+    padding: 10px;
+  
+}
