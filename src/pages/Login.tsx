@@ -7,8 +7,8 @@ export default function Login() {
       <header className="App-header">
         <Auth
           supabaseClient={supabase}
+          theme="default"
           appearance={{ theme: ThemeSupa }}
-          theme="dark"
           providers={["github"]}
         />
       </header>

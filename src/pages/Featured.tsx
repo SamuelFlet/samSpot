@@ -11,7 +11,6 @@ function Featured() {
       try {
         const { data } = await supabase.rpc("get_latest");
         setData(data);
-        console.log(data);
       } catch (error) {
         alert("Error");
       } finally {
@@ -31,33 +30,31 @@ function Featured() {
     const tent = con.split(" ").slice(0, 15).join(" ");
     const plain = removeMd(tent);
     return (
-      <div>
-        <div className="container center border border-black">
-          <div className="tt">
-            <img alt="article" src={data.img} />
+      <div className=" border border-black">
+        <div className="tt">
+          <img alt="article" src={data.img} />
+        </div>
+        <div className="p-4 text-left">
+          <div className="flex uu">
+            {format} &bull; {data.postedBy}
           </div>
-          <div className="p-4 text-left">
-            <div className="flex uu">
-              {format} &bull; {data.postedBy}
-            </div>
-            <div>
-              <Link
-                className="wow"
-                style={{ display: "block", margin: "1rem 0" }}
-                to={`${data.id}`}
-                key={data.id}
-              >
-                <div className="pp">{data.title}</div>
+          <div>
+            <Link
+              className="wow"
+              style={{ display: "block", margin: "1rem 0" }}
+              to={`${data.id}`}
+              key={data.id}
+            >
+              <div className="pp">{data.title}</div>
 
-                <div>{plain}...</div>
-              </Link>
-            </div>
+              <div>{plain}...</div>
+            </Link>
           </div>
         </div>
       </div>
     );
   }
-  return <div>poop</div>;
+  return <div>Loading...</div>;
 }
 
 export default Featured;
