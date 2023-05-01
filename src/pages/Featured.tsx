@@ -42,12 +42,12 @@ function Featured() {
             <Link
               className="wow"
               style={{ display: "block", margin: "1rem 0" }}
-              to={`${data.id}`}
-              key={data.id}
+              to={`posts/${data.id}`}
+              key={`${data.id}`}
             >
-              <div className="pp">{data.title}</div>
+              <div className="text-3xl">{data.title}</div>
 
-              <div>{plain}...</div>
+              <div className="p-1">{plain}...</div>
             </Link>
           </div>
         </div>
